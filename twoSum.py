@@ -20,16 +20,14 @@ class Solution:
         return []
     
     # Better Solution
-    # Runtime: 444 ms
+    # Runtime: 372 ms
     def twoSumBetter(self, nums, target):
         another = []
-        index = 0
-        for i in nums:
+        for index, i in enumerate(nums):
             j = target - i
             if j in another:
                 return [another.index(j), index]
             another.append(i)
-            index += 1
 
 
 so = Solution()
