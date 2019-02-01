@@ -8,9 +8,9 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
-        ordered_index = 0
         if not nums:
-            return ordered_index 
+            return 0 
+        ordered_index = 0
         for index, num in enumerate(nums):
            if not index:
                # when index == 0
@@ -21,8 +21,6 @@ class Solution:
                    if ordered_index != index:
                        nums[ordered_index], nums[index] = num, nums[ordered_index]
                    last_num = num
-               else:
-                   continue
         return ordered_index + 1
 
 
